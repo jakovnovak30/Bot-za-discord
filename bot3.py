@@ -7,14 +7,16 @@ import re
 import random
 import difflib
 import unicodedata
-import dotenv
+from dotenv import load_dotenv, find_dotenv
 from discord.ext import commands
 from discord.ext.commands import Bot
 from collections import deque
 from pretty_help import PrettyHelp
 
-load_dotenv()
-server = 'SERVER'
+load_dotenv('postavke.env')
+token = os.getenv('BOT_TOKEN')
+server = os.getenv('DISCORD_SERVER')
+PATH = os.getenv('FILE_PATH')
 
 svirac = commands.Bot(command_prefix='<', help_command=PrettyHelp(no_category="Help", show_index=False))
 q = deque()
@@ -32,7 +34,7 @@ def download(upis):
     video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
     rezultat = "https://www.youtube.com/watch?v=" + video_ids[0]
 
-    naredba = 'youtube-dl -x --audio-format mp3 --output "PATH' + upis + '.mp3" ' + rezultat
+    naredba = 'youtube-dl -x --audio-format mp3 --output "' + PATH + upis + '.mp3" ' + rezultat
 
     os.system(naredba)
     print('Skinuto je')
@@ -45,7 +47,7 @@ def muzika(vc):
     if len(q) > 0 and not vc.is_playing():
         sviram = q.popleft()
         pesma = sviram + ".mp3"
-        pesma = 'PATH' + pesma
+        pesma = PATH + pesma
         print('Trebal bi svirati ' + pesma + ' ' + str(len(pesma)))
         vc.play(discord.FFmpegOpusAudio(pesma), after=lambda m: muzika(vc))
 
@@ -80,8 +82,8 @@ async def sviraj(ctx, *ime):
 
     pesma = fajlq + ".mp3"
     #fajl postoji
-    if os.path.exists('PATH' + pesma):
-        pesma = 'PATH' + pesma
+    if os.path.exists(PATH + pesma):
+        pesma = PATH + pesma
         q.append(fajlq)
     else:
         #fajl ne postoji
@@ -188,7 +190,7 @@ async def klir(ctx):
 @svirac.command(name='popis', help='ispisuje popis mogucih pesama')
 async def popis(ctx, slovo):
     os.system('ls > popis.txt')
-    file = open("PATHpopis.txt", "r")
+    file = open(PATH + "popis.txt", "r")
     ispis = ''
     for x in file:
         if x[0] == slovo.lower() or x[0] == slovo.upper():
@@ -221,8 +223,8 @@ async def ladd(ctx, list, *args):
 
     fajl2 = open(list + ".txt", "a+")
 
-    if os.path.exists('PATH' + upis + ".mp3"):
-        pesma = 'PATH' + upis + ".mp3"
+    if os.path.exists(PATH + upis + ".mp3"):
+        pesma = PATH + upis + ".mp3"
         fajl2.write(upis + "\n")
         await ctx.send('Stavljena je pesma ' + upis + ' na listu ' + list)
     else:
@@ -266,4 +268,4 @@ async def lplay(ctx, list):
     vc = ctx.voice_client
     muzika(vc)
 
-svirac.run('TOKEN')
+svirac.run(token)

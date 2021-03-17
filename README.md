@@ -3,5 +3,6 @@
 - na početku se stavi ime servera i na kraju token bota s discordove stranice 
 - u funkciji def muzika(vc) mozete prilagoditi put do mp3 datoteka 
 - trebate instalirati sve što je importano u kodu + youtube-dl aplikaciju za terminal (ukoliko koristite naredbu 'download') 
-- bot3.py je eksperimentalna verzija bota koja pokusava prepoznati greske u upisu i automatski downloadati pjesmu ako pokušavate pustiti nešto što nije u mapi s pesmama \
+- bot3.py je eksperimentalna verzija bota koja pokusava prepoznati greske u upisu i automatski downloadati pjesmu ako pokušavate pustiti nešto što nije u mapi s pesmama
+- ako koristite bot3.py možete prilagoditi varijable za svoj bot i server u datoteci postavke.env \
 Sretno!

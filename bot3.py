@@ -94,7 +94,7 @@ async def sviraj(ctx, *ime):
         file = open("popis.txt", "r")
 
         for x in file:
-            distanca = difflib.SequenceMatcher(None, pesma[:len(pesma)-4], x[:len(x)-4]).ratio()
+            distanca = difflib.SequenceMatcher(None, pesma[:len(pesma)-4].lower(), x[:len(x)-4].lower()).ratio()
             if(distanca > najmanja):
                 najmanja = distanca
                 fajl = x
@@ -236,7 +236,7 @@ async def ladd(ctx, list, *args):
         file = open("popis.txt", "r")
 
         for x in file:
-            distanca = difflib.SequenceMatcher(None, upis, x[:len(x)-4]).ratio()
+            distanca = difflib.SequenceMatcher(None, upis.lower(), x[:len(x)-4].lower()).ratio()
             if(distanca > najmanja):
                 najmanja = distanca
                 fajl = x
@@ -268,4 +268,5 @@ async def lplay(ctx, list):
     vc = ctx.voice_client
     muzika(vc)
 
+#aktivira svirace na svirku
 svirac.run(token)

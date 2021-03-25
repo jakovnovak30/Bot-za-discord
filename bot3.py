@@ -18,6 +18,8 @@ token = os.getenv('BOT_TOKEN')
 server = os.getenv('DISCORD_SERVER')
 PATH = os.getenv('FILE_PATH')
 
+os.system('cd ' + PATH)
+
 svirac = commands.Bot(command_prefix='<', help_command=PrettyHelp(no_category="Help", show_index=False))
 q = deque()
 sviram = ' '

@@ -189,7 +189,7 @@ async def klir(ctx):
 
 @svirac.command(name='popis', help='ispisuje popis mogucih pesama')
 async def popis(ctx, slovo):
-    os.system('ls > popis.txt')
+    os.system('ls ' + PATH + ' > popis.txt')
     file = open(PATH + "popis.txt", "r")
     ispis = ''
     for x in file:
@@ -232,7 +232,7 @@ async def ladd(ctx, list, *args):
         najmanja = -1 #razlika najblizeg
         fajl = ' ' #ime najblizeg
 
-        os.system('ls > popis.txt')
+        os.system('ls ' + PATH + ' > popis.txt')
         file = open("popis.txt", "r")
 
         for x in file:

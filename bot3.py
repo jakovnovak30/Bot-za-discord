@@ -90,8 +90,8 @@ async def sviraj(ctx, *ime):
         najmanja = -1 #razlika najblizeg
         fajl = ' ' #ime najblizeg
 
-        os.system('ls ' + PATH + ' > popis.txt')
-        file = open("popis.txt", "r")
+        os.system('ls ' + PATH + ' > ' + PATH + 'popis.txt')
+        file = open(PATH + "popis.txt", "r")
 
         for x in file:
             distanca = difflib.SequenceMatcher(None, pesma[:len(pesma)-4].lower(), x[:len(x)-4].lower()).ratio()
@@ -189,7 +189,7 @@ async def klir(ctx):
 
 @svirac.command(name='popis', help='ispisuje popis mogucih pesama')
 async def popis(ctx, slovo):
-    os.system('ls ' + PATH + ' > popis.txt')
+    os.system('ls ' + PATH + ' > ' + PATH + 'popis.txt')
     file = open(PATH + "popis.txt", "r")
     ispis = ''
     for x in file:
@@ -232,8 +232,8 @@ async def ladd(ctx, list, *args):
         najmanja = -1 #razlika najblizeg
         fajl = ' ' #ime najblizeg
 
-        os.system('ls ' + PATH + ' > popis.txt')
-        file = open("popis.txt", "r")
+        os.system('ls ' + PATH + ' > ' + PATH + 'popis.txt')
+        file = open(PATH + "popis.txt", "r")
 
         for x in file:
             distanca = difflib.SequenceMatcher(None, upis.lower(), x[:len(x)-4].lower()).ratio()

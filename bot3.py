@@ -18,8 +18,6 @@ token = os.getenv('BOT_TOKEN')
 server = os.getenv('DISCORD_SERVER')
 PATH = os.getenv('FILE_PATH')
 
-os.system('cd ' + PATH)
-
 svirac = commands.Bot(command_prefix='<', help_command=PrettyHelp(no_category="Help", show_index=False))
 q = deque()
 sviram = ' '
@@ -92,7 +90,7 @@ async def sviraj(ctx, *ime):
         najmanja = -1 #razlika najblizeg
         fajl = ' ' #ime najblizeg
 
-        os.system('ls > popis.txt')
+        os.system('ls ' + PATH + ' > popis.txt')
         file = open("popis.txt", "r")
 
         for x in file:

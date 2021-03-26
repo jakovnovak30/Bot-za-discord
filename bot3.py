@@ -221,7 +221,7 @@ async def ladd(ctx, list, *args):
     for x in range(1, len(args)):
         upis = upis + ' ' + args[x]
 
-    fajl2 = open(list + ".txt", "a+")
+    fajl2 = open(PATH + list + ".txt", "a+")
 
     if os.path.exists(PATH + upis + ".mp3"):
         pesma = PATH + upis + ".mp3"
@@ -261,7 +261,7 @@ async def lplay(ctx, list):
         if vc.is_playing():
             await ctx.send('Sviram pesmu ' + sviram)
 
-    fajl = open(list + ".txt", "r")
+    fajl = open(PATH + list + ".txt", "r")
     for x in fajl:
         q.append(x[:len(x)-1])
 

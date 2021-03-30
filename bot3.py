@@ -103,7 +103,8 @@ async def sviraj(ctx, *ime):
             fajl = fajl[:len(fajl)-5]
             q.append(fajl)
         else:
-            download(fajlq)
+            while not os.path.exists(PATH + pesma):
+                download(fajlq)
             await ctx.send('Skinuto je.')
             q.append(fajlq)
 
@@ -204,7 +205,8 @@ async def skini(ctx, *upis):
     pjesma = upis[0]
     for x in range(1,len(upis)):
         pjesma = pjesma + ' ' + upis[x]
-    download(pjesma)
+    while not os.path.exists(PATH + pjesma + ".mp3"):
+        download(pjesma)
     await ctx.send('Skinuto je.')
 
 @svirac.command(name='now', help='ispisuje trenutnu pesmu')
@@ -246,7 +248,8 @@ async def ladd(ctx, list, *args):
             fajl2.write(fajl + "\n")
             await ctx.send('Stavljena je pesma ' + fajl + ' na listu ' + list)
         else:
-            download(upis)
+            while not os.path.exists(PATH + upis + ".mp3"):
+                download(upis)
             await ctx.send('Skinuto je.')
             fajl2.write(upis + "\n")
             await ctx.send('Stavljena je pesma ' + upis + ' na listu ' + list)

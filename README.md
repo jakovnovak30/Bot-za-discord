@@ -44,7 +44,7 @@ Korištenje bota
 	* muzika s interneta će se spremiti u mapu koju ste odredili u datoteci "postavke.env"
 #### Ako nemate youtube-dl
 	* pokrenite program "bot2.py"
-	* možete  puštati samo muziku koja je na kompjuteru spremljena
+	* možete puštati samo muziku koja je na kompjuteru spremljena
 
 * napišite "<help" u voice channel da biste vidjeli popis naredbi
 

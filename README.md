@@ -17,7 +17,7 @@ Sadržaj
 	* [Imate git CLI](#Ako-imate-git-CLI)
 	* [Nemate git CLI](#Ako-nemate-git-CLI)
 * [Postavke](#Postavljanje-postavki)
-	* [Nemam token za bot!](#Što-ako-nemam-token-?)
+	* [Nemam token za bot!](#Što-ako-nemam-token?)
 * [Korištenje](#Korištenje-bota)
 	* [Imate youtube-dl CLI](#Ako-imate-youtube-dl-CLI)
 	* [Nemate youtube-dl CLI](#Ako-nemate-youtube-dl-CLI)

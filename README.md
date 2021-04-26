@@ -11,11 +11,13 @@ Instalacija bota
 	* upišite git clone https://github.com/jakovnovak30/Bot-za-discord.git u terminal
 	* izmjenite potrebni tekst u datoteci "postavke.env"
 
+![Preuzimanje s git CLI-om](/slike/download2.png)
+
 #### Ako nemate git CLI
 	* pritisnite zeleni gumb "Code" i preuzmite ZIP verziju ovog repositorija
 	* izmjenite tekst u datoteci "postavke.env" nakon što ste raspakirali ZIP u željenu mapu
 
-![Preuzimanje bez git CLI-a](download.png)
+![Preuzimanje bez git CLI-a](/slike/download.png)
 
 Postavljanje postavki
 ---
@@ -28,7 +30,7 @@ Postavljanje postavki
 	* napravite novu aplikaciju s botom
 	* na kartici OAuth2 dodajte bot u svoj server
 
-![Primjer bota na discordovoj stranici](discordapi.png)
+![Primjer bota na discordovoj stranici](/slike/discordapi.png)
 
 * na trećoj liniji napišite put do mape u kojoj imate spremljene pjesme na vašem računalu
 

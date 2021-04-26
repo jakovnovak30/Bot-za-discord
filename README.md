@@ -40,7 +40,7 @@ Postavljanje postavki
 * na drugu liniju upišite token bota
 * na trećoj liniji napišite put do mape u kojoj imate spremljene pjesme na vašem računalu
 
-![postavke](/slike/postavke.png)
+![Postavke](/slike/postavke.png)
 
 #### Što ako nemam token?
 	* otvorite stranicu https://discord.com/developers/applications

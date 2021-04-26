@@ -25,6 +25,8 @@ Postavljanje postavki
 * na prvu liniju upišite ime servera na kojem ćete koristiti bot 
 * na drugu liniju upišite token bota
 
+![postavke](/slike/postavke.png)
+
 #### Što ako nemam token?
 	* otvorite stranicu https://discord.com/developers/applications
 	* napravite novu aplikaciju s botom

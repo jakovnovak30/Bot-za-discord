@@ -9,6 +9,11 @@ O botu
 
 ![Demonstracija bota](/slike/demonstracija.png)
 
+Requirements
+---
+* python3
+* svi moduli za python3 koji su navedeni u datoteci "requirements.txt"
+
 Instalacija bota
 ---
 #### Ako imate git CLI

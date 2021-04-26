@@ -6,22 +6,22 @@ O botu
 
 Instalacija bota
 ---
-## Ako imate git CLI
-* otvorite terminal u mapi u koju želite spremiti bota
-* upišite git clone https://github.com/jakovnovak30/Bot-za-discord.git u terminal
-* izmjenite potrebni tekst u datoteci "postavke.env"
+#### Ako imate git CLI
+	* otvorite terminal u mapi u koju želite spremiti bota
+	* upišite git clone https://github.com/jakovnovak30/Bot-za-discord.git u terminal
+	* izmjenite potrebni tekst u datoteci "postavke.env"
 
-## Ako nemate git CLI
-* pritisnite zeleni gumb "Code" i preuzmite ZIP verziju ovog repositorija
-* izmjenite tekst u datoteci "postavke.env" nakon što ste raspakirali ZIP u željenu mapu
+#### Ako nemate git CLI
+	* pritisnite zeleni gumb "Code" i preuzmite ZIP verziju ovog repositorija
+	* izmjenite tekst u datoteci "postavke.env" nakon što ste raspakirali ZIP u željenu mapu
 
 Postavljanje postavki
 ---
 * otvorite datoteku "postavke.env"
 * na prvu liniju upišite ime servera na kojem ćete koristiti bot 
 * na drugu liniju upišite token bota
-	Što ako nemam token?
-	---
+
+#### Što ako nemam token?
 	* otvorite stranicu https://discord.com/developers/applications
 	* napravite novu aplikaciju s botom
 	* na kartici OAuth2 dodajte bot u svoj server

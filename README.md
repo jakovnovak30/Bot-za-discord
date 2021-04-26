@@ -1,13 +1,5 @@
 # Bot-za-discord 
 
-Sadržaj
----
-* [O botu](#O-botu)
-* [Requirements](#Requirements)
-* [Instalacija](#Instalacija-bota)
-* [Postavke](#Postavljanje-postavki)
-* [Korištenje](#Korištenje-bota)
-
 O botu
 ---
 * jednostavni kod za bot koji pušta muziku
@@ -17,9 +9,23 @@ O botu
 
 ![Demonstracija bota](/slike/demonstracija.png)
 
+Sadržaj
+---
+* [Requirements](#Requirements)
+	* [Potrebni moduli za python3](#Sljedeći-moduli-za-python3)
+* [Instalacija](#Instalacija-bota)
+	* [Imate git CLI](#Ako-imate-git-CLI)
+	* [Nemate git CLI](#Ako-nemate-git-CLI)
+* [Postavke](#Postavljanje-postavki)
+	* [Nemam token za bot!](#Što-ako-nemam-token-?)
+* [Korištenje](#Korištenje-bota)
+	* [Imate youtube-dl CLI](#Ako-imate-youtube-dl-CLI)
+	* [Nemate youtube-dl CLI](#Ako-nemate-youtube-dl-CLI)
+
 Requirements
 ---
 * python3
+* youtube-dl CLI (za "bot3.py")
 #### Sljedeći moduli za python3
 	* discord.py>=1.6.0
 	* discord>=1.0.1

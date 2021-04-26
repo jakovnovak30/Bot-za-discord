@@ -3,6 +3,9 @@
 O botu
 ---
 * jednostavni kod za bot koji pušta muziku
+* ima dvije verzije:
+	1. "bot2.py" -> pušta samo muziku koja je spremljena lokalno
+	2. "bot3.py" -> može preuzeti muziku s interneta ako ne nađe pjesmu koja je spremljena na računalu i ima dovoljno sličan naslov (koristi se SequenceMatcher iz difflib modulea) 
 
 ![Demonstracija bota](/slike/demonstracija.png)
 

@@ -40,9 +40,11 @@ Korištenje bota
 ---
 #### Ako imate youtube-dl CLI
 	* pokrenite program "bot3.py"
+	* možete puštati muziku s kompjutera i muziku s interneta
+	* muzika s interneta će se spremiti u mapu koju ste odredili u datoteci "postavke.env"
 #### Ako nemate youtube-dl
 	* pokrenite program "bot2.py"
-	* možete samo muziku koja je na kompjuteru spremljena puštati
+	* možete  puštati samo muziku koja je na kompjuteru spremljena
 
 * napišite "<help" u voice channel da biste vidjeli popis naredbi
 

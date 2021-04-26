@@ -12,11 +12,11 @@ O botu
 Requirements
 ---
 * python3
-* sljedeći moduli za python3:
-	* discord.py==1.6.0
-	* discord==1.0.1
-	* python-dotenv==0.17.0
-	* tube_dl==5.1.0
+#### Sljedeći moduli za python3
+	* discord.py>=1.6.0
+	* discord>=1.0.1
+	* python-dotenv>=0.17.0
+	* tube_dl>=5.1.0
 
 Instalacija bota
 ---

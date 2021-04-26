@@ -1,5 +1,13 @@
 # Bot-za-discord 
 
+Sadržaj
+---
+* [O botu](#o botu)
+* [Requirements](#requirements)
+* [Instalacija bota](#instalacija)
+* [Postavljanje postavki](#postavke)
+* [Korištenje bota](#korištenje)
+
 O botu
 ---
 * jednostavni kod za bot koji pušta muziku

@@ -15,6 +15,8 @@ Instalacija bota
 	* pritisnite zeleni gumb "Code" i preuzmite ZIP verziju ovog repositorija
 	* izmjenite tekst u datoteci "postavke.env" nakon što ste raspakirali ZIP u željenu mapu
 
+![Preuzimanje bez git CLI-a](download.png)
+
 Postavljanje postavki
 ---
 * otvorite datoteku "postavke.env"

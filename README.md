@@ -1,4 +1,4 @@
-# Bot-za-discord 
+# Bot za discord
 
 O botu
 ---

@@ -6,12 +6,12 @@ O botu
 
 Instalacija bota
 ---
-	<h2> Ako imate git CLI </h2>
+	## Ako imate git CLI
 	* otvorite terminal u mapi u koju želite spremiti bota
 	* upišite git clone https://github.com/jakovnovak30/Bot-za-discord.git u terminal
 	* izmjenite potrebni tekst u datoteci "postavke.env"
 
-	<h2> Ako nemate git CLI </h2>
+	## Ako nemate git CLI
 	* pritisnite zeleni gumb "Code" i preuzmite ZIP verziju ovog repositorija
 	* izmjenite tekst u datoteci "postavke.env" nakon što ste raspakirali ZIP u željenu mapu
 

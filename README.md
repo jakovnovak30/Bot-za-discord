@@ -57,7 +57,7 @@ Postavljanje postavki
 ![Postavke](/slike/postavke.png)
 
 #### Što ako nemam token?
-	* otvorite stranicu https://discord.com/developers/applications
+	* otvorite stranicu [discorda](https://discord.com/developers/applications)
 	* napravite novu aplikaciju s botom
 	* na kartici OAuth2 dodajte bot u svoj server
 

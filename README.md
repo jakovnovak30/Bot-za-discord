@@ -5,7 +5,7 @@ Sadržaj
 * [O botu](#O-botu)
 * [Requirements](#Requirements)
 * [Instalacija](#Instalacija-bota)
-* [Postavki](#Postavljanje-postavki)
+* [Postavke](#Postavljanje-postavki)
 * [Korištenje](#Korištenje-bota)
 
 O botu

@@ -26,6 +26,8 @@ Postavljanje postavki
 	* napravite novu aplikaciju s botom
 	* na kartici OAuth2 dodajte bot u svoj server
 
+![Primjer bota na discordovoj stranici](discordapi.png)
+
 * na trećoj liniji napišite put do mape u kojoj imate spremljene pjesme na vašem računalu
 
 Korištenje bota

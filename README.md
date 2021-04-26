@@ -4,6 +4,8 @@ O botu
 ---
 * jednostavni kod za bot koji pušta muziku
 
+![Demonstracija bota](/slike/demonstracija.png)
+
 Instalacija bota
 ---
 #### Ako imate git CLI

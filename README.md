@@ -2,11 +2,11 @@
 
 Sadržaj
 ---
-* [O botu](#o botu)
-* [Requirements](#requirements)
-* [Instalacija bota](#instalacija)
-* [Postavljanje postavki](#postavke)
-* [Korištenje bota](#korištenje)
+* [O botu](#O-botu)
+* [Requirements](#Requirements)
+* [Instalacija](#Instalacija-bota)
+* [Postavki](#Postavljanje-postavki)
+* [Korištenje](#Korištenje-bota)
 
 O botu
 ---

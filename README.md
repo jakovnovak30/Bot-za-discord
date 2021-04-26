@@ -38,6 +38,7 @@ Postavljanje postavki
 * otvorite datoteku "postavke.env"
 * na prvu liniju upišite ime servera na kojem ćete koristiti bot 
 * na drugu liniju upišite token bota
+* na trećoj liniji napišite put do mape u kojoj imate spremljene pjesme na vašem računalu
 
 ![postavke](/slike/postavke.png)
 
@@ -47,8 +48,6 @@ Postavljanje postavki
 	* na kartici OAuth2 dodajte bot u svoj server
 
 ![Primjer bota na discordovoj stranici](/slike/discordapi.png)
-
-* na trećoj liniji napišite put do mape u kojoj imate spremljene pjesme na vašem računalu
 
 Korištenje bota
 ---

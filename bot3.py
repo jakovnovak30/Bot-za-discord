@@ -12,6 +12,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 from collections import deque
 from pretty_help import PrettyHelp
+from fuzzywuzzy import fuzz
 
 load_dotenv('postavke.env')
 token = os.getenv('BOT_TOKEN')
@@ -21,6 +22,12 @@ PATH = os.getenv('FILE_PATH')
 svirac = commands.Bot(command_prefix='<', help_command=PrettyHelp(no_category="Help", show_index=False))
 q = deque()
 sviram = ' '
+
+def matcher(a, b):
+    if len(b) < 10:
+        return SequenceMatcher(None, a, b).ratio()
+    else:
+        return fuzz.partial_ratio(a, b)/100 
 
 #muzika s interneta
 def download(upis):
@@ -94,12 +101,12 @@ async def sviraj(ctx, *ime):
         file = open(PATH + "popis.txt", "r")
 
         for x in file:
-            distanca = difflib.SequenceMatcher(None, pesma[:len(pesma)-4].lower(), x[:len(x)-4].lower()).ratio()
+            distanca = matcher(pesma[:len(pesma)-4].lower(), x[:len(x)-4].lower())
             if(distanca > najmanja):
                 najmanja = distanca
                 fajl = x
 
-        if najmanja > 0.65 * pow(0.995, len(fajl)-6):
+        if najmanja > 0.75 * pow(1.005, len(fajl)-10):
             fajl = fajl[:len(fajl)-5]
             q.append(fajl)
         else:
@@ -238,12 +245,12 @@ async def ladd(ctx, list, *args):
         file = open(PATH + "popis.txt", "r")
 
         for x in file:
-            distanca = difflib.SequenceMatcher(None, upis.lower(), x[:len(x)-4].lower()).ratio()
+            distanca = matcher(None, upis.lower(), x[:len(x)-4].lower())
             if(distanca > najmanja):
                 najmanja = distanca
                 fajl = x
 
-        if najmanja > 0.65 * pow(0.995, len(fajl)-6):
+        if najmanja > 0.75 * pow(1.005, len(fajl)-10):
             fajl = fajl[:len(fajl)-5]
             fajl2.write(fajl + "\n")
             await ctx.send('Stavljena je pesma ' + fajl + ' na listu ' + list)

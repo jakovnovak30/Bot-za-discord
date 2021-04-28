@@ -254,7 +254,7 @@ async def ladd(ctx, list, *args):
                 kriterij = match_result[1]
                 fajl = x
 
-        if najmanja > :
+        if najmanja > kriterij:
             fajl = fajl[:len(fajl)-5]
             fajl2.write(fajl + "\n")
             await ctx.send('Stavljena je pesma ' + fajl + ' na listu ' + list)

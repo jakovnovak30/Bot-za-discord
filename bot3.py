@@ -25,9 +25,9 @@ sviram = ' '
 
 def matcher(a, b):
     if len(b) < 10:
-        return SequenceMatcher(None, a, b).ratio()
+        return (SequenceMatcher(None, a, b).ratio(), 0.65 * pow(1.005, len(fajl)-6))
     else:
-        return fuzz.partial_ratio(a, b)/100 
+        return (fuzz.partial_ratio(a, b)/100, 0.8) 
 
 #muzika s interneta
 def download(upis):
@@ -99,14 +99,16 @@ async def sviraj(ctx, *ime):
 
         os.system('ls ' + PATH + ' > ' + PATH + 'popis.txt')
         file = open(PATH + "popis.txt", "r")
-
+        kriterij = 0
         for x in file:
-            distanca = matcher(pesma[:len(pesma)-4].lower(), x[:len(x)-4].lower())
+            match_result = matcher(pesma[:len(pesma)-4].lower(), x[:len(x)-4].lower())
+            distanca = match_result[0]
             if(distanca > najmanja):
                 najmanja = distanca
+                kriterij = match_result[1]
                 fajl = x
 
-        if najmanja > 0.75 * pow(1.005, len(fajl)-10):
+        if najmanja > kriterij:
             fajl = fajl[:len(fajl)-5]
             q.append(fajl)
         else:
@@ -243,14 +245,16 @@ async def ladd(ctx, list, *args):
 
         os.system('ls ' + PATH + ' > ' + PATH + 'popis.txt')
         file = open(PATH + "popis.txt", "r")
-
+        kriterij = 0
         for x in file:
-            distanca = matcher(None, upis.lower(), x[:len(x)-4].lower())
+            match_result = matcher(None, upis.lower(), x[:len(x)-4].lower())
+            distanca = match_result[0]
             if(distanca > najmanja):
                 najmanja = distanca
+                kriterij = match_result[1]
                 fajl = x
 
-        if najmanja > 0.75 * pow(1.005, len(fajl)-10):
+        if najmanja > :
             fajl = fajl[:len(fajl)-5]
             fajl2.write(fajl + "\n")
             await ctx.send('Stavljena je pesma ' + fajl + ' na listu ' + list)

@@ -27,6 +27,7 @@ Requirements
 * python3
 * youtube-dl CLI (za "bot3.py")
 #### Sljedeći moduli za python3:
+	* fuzzywuzzy>=0.18.0
 	* discord.py>=1.6.0
 	* discord>=1.0.1
 	* python-dotenv>=0.17.0

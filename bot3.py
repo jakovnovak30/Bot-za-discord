@@ -27,7 +27,7 @@ sviram = ' '
 
 def matcher(a, b):
     if len(b) < 10:
-        return (SequenceMatcher(None, a, b).ratio(), 0.65 * pow(1.005, len(fajl)-6))
+        return (SequenceMatcher(None, a, b).ratio(), 0.65 * pow(1.005, len(b)-6))
     else:
         return (fuzz.partial_ratio(a, b)/100, 0.8) 
 

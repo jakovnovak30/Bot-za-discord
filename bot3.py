@@ -7,7 +7,6 @@ import discord
 import urllib.request
 import re
 import random
-import difflib
 import unicodedata
 from dotenv import load_dotenv, find_dotenv
 from discord.ext import commands
@@ -15,6 +14,7 @@ from discord.ext.commands import Bot
 from collections import deque
 from pretty_help import PrettyHelp
 from fuzzywuzzy import fuzz
+from difflib import SequenceMatcher
 
 load_dotenv('postavke.env')
 token = os.getenv('BOT_TOKEN')

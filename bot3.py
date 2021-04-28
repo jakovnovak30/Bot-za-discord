@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # bot.py
 import os
 import asyncio

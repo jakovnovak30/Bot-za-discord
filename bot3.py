@@ -21,7 +21,7 @@ token = os.getenv('BOT_TOKEN')
 server = os.getenv('DISCORD_SERVER')
 PATH = os.getenv('FILE_PATH')
 
-svirac = commands.Bot(command_prefix='<', help_command=PrettyHelp(no_category="Help", show_index=False))
+svirac = Bot(command_prefix='<', help_command=PrettyHelp(no_category="Help", show_index=False))
 q = deque()
 sviram = ' '
 
@@ -43,7 +43,7 @@ def download(upis):
     video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
     rezultat = "https://www.youtube.com/watch?v=" + video_ids[0]
 
-    naredba = 'youtube-dl -x --audio-format mp3 --output "' + PATH + upis + '.mp3" ' + rezultat
+    naredba = 'yt-dlp -x --audio-format mp3 --output "' + PATH + upis + '.mp3" ' + rezultat
 
     os.system(naredba)
     print('Skinuto je')
@@ -119,10 +119,12 @@ async def sviraj(ctx, *ime):
             await ctx.send('Skinuto je.')
             q.append(fajlq)
 
+
     vc = ctx.voice_client
     await ctx.send('Dodana je pesma ' + q[-1])
-
-    muzika(vc)
+    
+    if not vc == None:
+        muzika(vc)
 
 
 #pauziranje
